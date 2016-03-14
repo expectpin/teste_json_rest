@@ -1,14 +1,23 @@
 <div class="container">
 
-	<div class="control-group">
+<!-- 	<div class="control-group">
 		<div class="controls">
-			<input type="text" autofocus="autofocus" placeholder="Parte Nome"
+			<input type="text" autofocus="autofocus" placeholder=""
 				ng-model="textoFiltro" />
 			<a ng-click="getLogradouros()" class="btn btn-small btn-primary">Pesquisar</a> 
 			<a ng-href="#/" class="btn btn-small">Voltar</a>
 		</div>
-	</div>
+	</div> -->
 
+
+	<div class="control-group">
+		<div class="controls">
+			<input type="text" autofocus="autofocus" placeholder="" ng-model="cepFiltro" />
+			<a ng-click="getLogradouroPorCep()" class="btn btn-small btn-primary">Pesquisar CEP nos Correios</a> 
+			<a ng-href="#/" class="btn btn-small">Voltar</a>
+		</div>
+	</div>
+	
 	<div class="span6">
 		<table class="table table-striped table-condensed">
 			<thead>

@@ -12,3 +12,19 @@
 	  .factory('LogradouroFactory', LogradouroFactory);
   
 })();
+
+(function () {
+	
+	function CorreiosFactory ($resource) {
+		return $resource('http://correiosapi.apphb.com/cep/:cepId',{},{
+			query: {method:'GET',params:{cepId:'@cepId'},isArray:true}
+//			update: { method: 'PUT', params: {logradouroId: '/@id'} }
+		});
+	};
+	
+	angular
+	  .module('LogradouroApp')
+	  .factory('CorreiosFactory', CorreiosFactory);
+  
+})();
+
