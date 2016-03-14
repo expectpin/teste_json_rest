@@ -2,8 +2,10 @@
 Exemplo de projeto de desenvolvimento de API REST em JAVA com front-end em Angular JS
 
 Pré-requisitos:
-Maven
-Servidor WildFly 9.x
+
+Maven, 
+Servidor WildFly 9.x;
+
 
 Passo a passo:
 Baixar o projeto;
