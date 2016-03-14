@@ -8,7 +8,8 @@
 		$scope.getLogradouroPorCep = function(){
 			var cepFiltro = $scope.cepFiltro;
 			if(typeof cepFiltro !== "undefined"){
-				$scope.logradouro = CorreiosFactory.query({cepId:cepFiltro});
+				$scope.endereco = CorreiosFactory.query({cepId:cepFiltro});
+				var teste = $scope.endereco
 			}
 		};
 		

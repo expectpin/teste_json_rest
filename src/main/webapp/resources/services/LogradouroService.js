@@ -7,23 +7,16 @@
 		});
 	};
 	
-	angular
-	  .module('LogradouroApp')
-	  .factory('LogradouroFactory', LogradouroFactory);
-  
-})();
-
-(function () {
-	
 	function CorreiosFactory ($resource) {
 		return $resource('http://correiosapi.apphb.com/cep/:cepId',{},{
-			query: {method:'GET',params:{cepId:'@cepId'},isArray:true}
-//			update: { method: 'PUT', params: {logradouroId: '/@id'} }
+			query: {method:'GET',params:{cepId:'@cepId'}}
+//			update: { method: 'PUT', params: {cepId: '/@cepId'} }
 		});
 	};
 	
 	angular
 	  .module('LogradouroApp')
+	  .factory('LogradouroFactory', LogradouroFactory)
 	  .factory('CorreiosFactory', CorreiosFactory);
   
 })();

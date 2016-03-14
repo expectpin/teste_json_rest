@@ -1,15 +1,5 @@
 <div class="container">
 
-<!-- 	<div class="control-group">
-		<div class="controls">
-			<input type="text" autofocus="autofocus" placeholder=""
-				ng-model="textoFiltro" />
-			<a ng-click="getLogradouros()" class="btn btn-small btn-primary">Pesquisar</a> 
-			<a ng-href="#/" class="btn btn-small">Voltar</a>
-		</div>
-	</div> -->
-
-
 	<div class="control-group">
 		<div class="controls">
 			<input type="text" autofocus="autofocus" placeholder="" ng-model="cepFiltro" />
@@ -17,23 +7,71 @@
 			<a ng-href="#/" class="btn btn-small">Voltar</a>
 		</div>
 	</div>
-	
+
+	<div class="span6">
+		<form role="form">
+			<div class="form-group">
+				<label for="cep">Cep:</label> <input type="text"
+					class="form-control" id="cep" ng-model="endereco.cep">
+			</div>
+			<div class="form-group">
+				<label for="tipoDeLogradouro">Tipo de Logradouro:</label> <input
+					type="text" class="form-control" id="tipoDeLogradouro" ng-model="endereco.tipoDeLogradouro">
+			</div>
+			<div class="form-group">
+				<label for="logradouro">Logradouro:</label> <input type="text"
+					class="form-control" id="logradouro" ng-model="endereco.logradouro">
+			</div>
+			<div class="form-group">
+				<label for="bairro">Bairro:</label> <input type="text"
+					class="form-control" id="bairro" ng-model="endereco.bairro">
+			</div>
+			<div class="form-group">
+				<label for="cidade">Cidade:</label> <input type="text"
+					class="form-control" id="cidade" ng-model="endereco.cidade">
+			</div>
+			<div class="form-group">
+				<label for="estado">Estado:</label> <input type="text"
+					class="form-control" id="estado" ng-model="endereco.estado">
+			</div>
+			<button type="submit" class="btn btn-default">Salvar</button>
+		</form>
+	</div>
+	</br>
+
+	</br>
+	<div class="control-group">
+		<div class="controls">
+			<input type="text" autofocus="autofocus" placeholder=""
+				ng-model="textoFiltro" />
+			<a ng-click="getLogradouros()" class="btn btn-small btn-primary">Listar</a> 
+			<a ng-href="#/" class="btn btn-small">Voltar</a>
+		</div>
+	</div>
+
 	<div class="span6">
 		<table class="table table-striped table-condensed">
 			<thead>
 		        <tr>
-		            <th style="min-width: 30px;">Cep</th>
-		            <th style="min-width: 80px;">Logradouro</th>
+		            <th style="min-width: 10%;">Cep</th>
+		            <th style="min-width: 10%;">Tipo de Logradouro</th>
+		        	<th style="min-width: 30%;">Logradouro</th>
+		            <th style="min-width: 20%;">Rairro</th>
+		            <th style="min-width: 20%;">Cidade</th>
+		            <th style="min-width: 10%;">Estado</th>
 		        </tr>
 	        </thead>
 	        <tbody>
 	        	<tr ng-repeat="logradouro in logradouros">
 	        		<td>{{logradouro.cep}}</td>
+	        		<td>{{logradouro.tipoDeLogradouro}}</td>
 	        		<td>{{logradouro.logradouro}}</td>
+	        		<td>{{logradouro.bairro}}</td>
+	        		<td>{{logradouro.cidade}}</td>
+	        		<td>{{logradouro.estado}}</td>
 	        	</tr>
 	        </tbody>
 		</table>
 		<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
 	</div>	
-	
 </div>
