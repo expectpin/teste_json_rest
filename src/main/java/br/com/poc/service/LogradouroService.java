@@ -24,6 +24,10 @@ public class LogradouroService {
 		return logradouroDAO.getPaginated(pageNumber, pageSize);
 	}
 	
+	public Logradouro save(Logradouro logradouro){
+		return logradouroDAO.save(logradouro);
+	}
+	
 	public List<Logradouro> createLogradouros() {
 		for (int i = 0; i < 20; i++) {
 			Logradouro logradouro = new Logradouro();

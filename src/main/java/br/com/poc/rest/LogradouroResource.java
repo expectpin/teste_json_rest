@@ -28,7 +28,7 @@ public class LogradouroResource {
 
 	@GET
 	public List<Logradouro> getLogradouros() {
-		List<Logradouro> lista =  service.createLogradouros();
+		//List<Logradouro> lista =  service.createLogradouros();
 		return service.findAll();
 	}
 
@@ -54,8 +54,7 @@ public class LogradouroResource {
 
 	@POST
 	public Response saveLogradouro(Logradouro logradouro) {
-		logradouro.setCep(10);
-		return Response.status(Response.Status.ACCEPTED).entity(logradouro).build();
+		return Response.ok(service.save(logradouro)).build();
 	}
 
 	@PUT

@@ -13,6 +13,18 @@
 			}
 		};
 		
+		$scope.salvar = function(objeto) {
+			LogradouroFactory.save(objeto,$scope.salvarSuccess,$scope.salvarError);
+		};
+		
+		$scope.salvarSuccess = function(data) {
+			alert(data);
+		};
+		
+		$scope.salvarError = function(data) {
+			alert(data);
+		};
+		
 	};
 	
 	angular
